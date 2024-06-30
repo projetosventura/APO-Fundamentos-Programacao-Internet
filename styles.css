@@ -1,0 +1,167 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 10px;
+    background-color: #2D2E31; /* Cor de fundo geral */
+    color: #e0a800; /* Cor dourada para o texto */
+}
+
+.header {
+    background-color: #1E1E1E;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+    position: relative;
+}
+
+.header-logo {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    height: 80px; /* Altura da imagem */
+}
+
+.breadcrumb {
+    display: inline-block;
+    background: none;
+    margin-bottom: 0;
+}
+
+.breadcrumb-item.active {
+    color: #83770D;
+}
+
+.section {
+    margin-bottom: 10px;
+}
+
+.section h2 {
+    margin-bottom: 10px;
+    color: #e0a800; /* Cor dourada para destacar o título */
+}
+
+.input-group {
+    margin-bottom: 10px;
+    position: relative; /* Posicionamento relativo para conter os pseudo-elementos */
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #e0a800; /* Cor dourada para o texto */
+}
+
+.input-group input[type="text"],
+.input-group input[type="tel"],
+.input-group textarea {
+    width: 100%;
+    padding: 8px; /* Aumentei o padding para destacar mais os campos */
+    margin-top: 5px;
+    box-sizing: border-box;
+    border: 2px solid #000000; /* Bordas padrão mais grossas */
+    border-radius: 12px; /* Bordas mais arredondadas */
+    transition: border-color 0.3s ease; /* Transição suave para a cor da borda */
+    position: relative; /* Adicionado para posicionamento relativo */
+}
+
+.input-group input[type="text"]:hover,
+.input-group input[type="tel"]:hover,
+.input-group textarea:hover {
+    border-color: #e0a800; /* Cor dourada no hover */
+}
+
+.input-group input[type="text"]:focus,
+.input-group input[type="tel"]:focus,
+.input-group textarea:focus {
+    outline: none; /* Remover o outline padrão do navegador */
+    border-color: #e0a800; /* Cor dourada quando focado */
+    border-width: 2px;
+}
+
+.input-group input[type="text"]:focus::before,
+.input-group input[type="tel"]:focus::before,
+.input-group textarea:focus::before,
+.input-group input[type="text"]:focus::after,
+.input-group input[type="tel"]:focus::after,
+.input-group textarea:focus::after {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border: 2px solid transparent;
+    border-radius: 12px; /* Bordas mais arredondadas */
+    pointer-events: none;
+    background: linear-gradient(90deg, #e0a800, #e0a800 25%, transparent 25%, transparent 50%, #e0a800 50%, #e0a800 75%, transparent 75%, transparent);
+    background-size: 200% 100%;
+    animation: border-snake 1s linear infinite;
+}
+
+@keyframes border-snake {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #e0a800; /* Cor dourada para o texto */
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 8px; /* Ajuste no padding para combinar com os inputs */
+    margin-top: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    margin-top: 10px;
+    padding: 12px 20px; /* Aumentei o padding do botão */
+    background-color: #e0a800;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 12px; /* Bordas mais arredondadas */
+}
+
+button:hover {
+    background-color: #c99900;
+}
+
+.add-button {
+    background-color: #e0a800;
+    margin-bottom: 10px;
+    padding: 12px 20px; /* Aumentei o padding do botão */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 12px; /* Bordas mais arredondadas */
+}
+
+.add-button:hover {
+    background-color: #c99900;
+}
+
+/* Centralizar o botão Gerar PDF */
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.button-container button {
+    margin-top: 0; /* Remover margem adicional no botão */
+}
